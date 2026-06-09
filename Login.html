@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:#f4f6f9;
+}
+
+h2{
+    color:#007bff;
+    font-size:36px;
+    font-weight:bold;
+    margin-bottom:25px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+input{
+    width:280px;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+}
+
+input:focus{
+    outline:none;
+    border-color:#007bff;
+}
+
+button{
+    width:280px;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    background:#007bff;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+</style>
+</head>
+<body>
+    <h2>Login Page</h2>
+    <input type="text"  id="username" placeholder="Enter username">
+    <br><br>
+    <input type="password" id="password" placeholder="Enter password">
+    <br><br>
+    <button onclick="login()">Login</button>
+    <h3 id="result">Result: </h3>
+    <script>
+        function login() {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        if (username === "admin" && password === "12345") {
+            document.getElementById("result").innerHTML ="Login Successful";
+        } else {
+            document.getElementById("result").innerHTML ="Login Failed";
+        }  
+    }
+    </script>
+</body>
+</html>
